@@ -1,21 +1,27 @@
 .header {
+  text-align: center;
     grid-column: full-start / full-end;
-    display: flex;
+    display: grid;
+    grid-template-rows: min-content min-content min-content;
+    grid-template-columns: minmax(min-content, max-content);
+    grid-row-gap: 2rem;
     justify-content: center;
-    align-items: center;
+    align-content: center;
 
-    &__text-box {
-      display: flex;
-      flex-direction: column;
-      align-items:center;
+
+    &__btn {
+      justify-self: center;
+      align-self: start;
+      background-color: $color-primary;
+      color: $color-grey-dark-3;
+
+      &::after {
+          background-color: $color-primary;
+      }
+      &--animated {
+        animation: moveInBottom .5s ease-out .75s;
+        animation-fill-mode: backwards;
+    }
     }
 }
 
-.heading-primary {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-    &--main {
-       
-    }
-}

@@ -35,6 +35,12 @@
 
 html {
   font-size: 62.5%; }
+  @media only screen and (min-width: 20em) {
+    html {
+      font-size: 40%; } }
+  @media only screen and (min-width: 37.5em) {
+    html {
+      font-size: 62.5%; } }
 
 body {
   box-sizing: border-box; }
@@ -46,9 +52,8 @@ body {
 
 body {
   font-family: "Lato", sans-serif;
-  font-weight: 400;
-  line-height: 1.7;
-  color: grey; }
+  font-weight: 700;
+  line-height: 1.7; }
 
 .heading-primary {
   color: white;
@@ -56,18 +61,20 @@ body {
   backface-visibility: hidden;
   margin-bottom: 6rem; }
   .heading-primary--main {
-    display: block;
+    font-family: 'Courgette', cursive;
     font-size: 6rem;
     font-weight: 400;
-    letter-spacing: 3.5rem;
+    letter-spacing: 2.5rem;
+    color: #EFD28D;
     animation-name: moveInLeft;
     animation-duration: 1s;
     animation-timing-function: ease-out; }
   .heading-primary--sub {
-    display: block;
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 1.75rem;
+    color: #fff;
+    text-shadow: 2px 2px 5px #000;
     animation: moveInRight 1s ease-out; }
 
 .heading-secondary {
@@ -76,23 +83,72 @@ body {
   font-weight: 700;
   display: inline-block;
   color: transparent;
-  letter-spacing: .2rem;
-  transition: all .2s; }
+  letter-spacing: 0.2rem;
+  transition: all 0.2s; }
 
 .header {
+  text-align: center;
   grid-column: full-start / full-end;
-  display: flex;
+  display: grid;
+  grid-template-rows: min-content min-content min-content;
+  grid-template-columns: minmax(min-content, max-content);
+  grid-row-gap: 2rem;
   justify-content: center;
-  align-items: center; }
-  .header__text-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center; }
+  align-content: center; }
+  .header__btn {
+    justify-self: center;
+    align-self: start;
+    background-color: #EFD28D;
+    color: #333; }
+    .header__btn::after {
+      background-color: #EFD28D; }
+    .header__btn--animated {
+      animation: moveInBottom .5s ease-out .75s;
+      animation-fill-mode: backwards; }
 
-.heading-primary {
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
+.bg-light {
+  background-color: transparent !important; }
+
+.navbar-brand {
+  font-family: "Courgette", cursive;
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: 0.5rem;
+  text-align: center;
+  color: #EFD28D !important;
+  margin-left: 5rem; }
+
+.nav-link {
+  color: #fff !important;
+  font-size: 1.5rem;
+  position: relative; }
+  .nav-link::after {
+    content: "";
+    background: #EFD28D;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    height: 2px;
+    width: 6rem;
+    transform: scaleX(0);
+    transition: transform 0.3s; }
+  .nav-link:hover::after {
+    transform: scaleX(1); }
+
+.nav-item {
+  position: relative; }
+  .nav-item:not(:last-child) {
+    margin-right: 10rem !important; }
+  .nav-item:last-child {
+    margin-right: 2rem !important; }
+
+.navbar-toggler {
+  color: #EFD28D !important;
+  border-color: #EFD28D !important; }
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(239, 210, 141, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important; }
 
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -118,17 +174,11 @@ body {
   transform: translateY(-1px);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
-.btn--white {
-  background-color: #fff;
-  color: #777; }
-  .btn--white::after {
-    background-color: #fff; }
-
 .btn--green {
-  background-color: #55c57a;
+  background-color: #EFD28D;
   color: #fff; }
   .btn--green::after {
-    background-color: #55c57a; }
+    background-color: #EFD28D; }
 
 .btn::after {
   content: "";
@@ -142,10 +192,6 @@ body {
   z-index: -1;
   transition: all .4s; }
 
-.btn--animated {
-  animation: moveInBottom .5s ease-out .75s;
-  animation-fill-mode: backwards; }
-
 .bg-video {
   position: absolute;
   top: 0;
@@ -153,7 +199,7 @@ body {
   height: 100%;
   width: 100%;
   z-index: -1;
-  opacity: 0.6;
+  opacity: 1;
   overflow: hidden; }
   .bg-video__content {
     height: 100%;

@@ -9,6 +9,12 @@
 html {
     // This defines what 1rem is
     font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+    @media only screen and (min-width: $bp-very-small) {
+        font-size: 40%;
+    }
+    @media only screen and (min-width: $bp-small) {
+        font-size: 62.5%;
+    }
 }
 
 body {
