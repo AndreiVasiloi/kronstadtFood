@@ -1,0 +1,27 @@
+
+.story {
+  &-picture {
+      grid-column: full-start / col-end 4;
+      // background-image: url(../../img/about2.jpg);
+      // background-position: center;
+      // background-size: cover;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(6, 1fr);
+      align-items: center;
+      img {
+        width: 100%;
+        grid-column: 2/6; 
+        grid-row: 2/6;
+      }
+  }
+
+  &-content {
+    grid-column: col-start 5 / full-end;
+    background-color: $color-white; 
+    padding: 6rem 8vw;
+    display: grid;
+    align-content: center;
+    justify-items: start;
+  }
+}

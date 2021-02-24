@@ -1,27 +1,25 @@
 .header {
   text-align: center;
-    grid-column: full-start / full-end;
-    display: grid;
-    grid-template-rows: min-content min-content min-content;
-    grid-template-columns: minmax(min-content, max-content);
-    grid-row-gap: 2rem;
-    justify-content: center;
-    align-content: center;
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-rows: min-content min-content min-content;
+  grid-template-columns: minmax(min-content, max-content);
+  grid-row-gap: 2rem;
+  justify-content: center;
+  align-content: center;
 
+  &__btn {
+    justify-self: center;
+    align-self: start;
+    background-color: $color-primary;
+    color: $color-grey-dark-3;
 
-    &__btn {
-      justify-self: center;
-      align-self: start;
+    &::after {
       background-color: $color-primary;
-      color: $color-grey-dark-3;
-
-      &::after {
-          background-color: $color-primary;
-      }
-      &--animated {
-        animation: moveInBottom .5s ease-out .75s;
-        animation-fill-mode: backwards;
     }
+    &--animated {
+      animation: moveInBottom 0.5s ease-out 0.75s;
+      animation-fill-mode: backwards;
     }
+  }
 }
-
