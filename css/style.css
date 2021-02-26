@@ -62,10 +62,10 @@ body {
   margin-bottom: 6rem; }
   .heading-primary--main {
     font-family: "Courgette", cursive;
-    font-size: 6rem;
+    font-size: 10rem;
     font-weight: 400;
     letter-spacing: 2.5rem;
-    color: #EFD28D;
+    color: #efd28d;
     animation-name: moveInLeft;
     animation-duration: 1s;
     animation-timing-function: ease-out; }
@@ -90,7 +90,7 @@ body {
   font-family: "Courgette", cursive;
   font-weight: 400;
   font-size: 2.6rem;
-  color: #EFD28D;
+  color: #efd28d;
   text-transform: uppercase; }
 
 .story-header-2 {
@@ -98,12 +98,32 @@ body {
   font-size: 4rem;
   font-style: italic;
   line-height: 1;
-  color: #54483A; }
+  color: #54483a; }
 
 .story-text {
   font-size: 1.5rem;
   font-style: italic;
   margin-bottom: 4rem; }
+
+.menu-title {
+  color: #efd28d;
+  font-family: "Courgette", cursive;
+  font-size: 5rem;
+  font-weight: 400;
+  letter-spacing: 1.5rem; }
+
+.menu-product-title {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #efd28d; }
+
+.menu-product-ing {
+  font-size: 1.5rem;
+  font-weight: 400; }
+
+.menu-product-price {
+  font-size: 1.5rem;
+  font-weight: 400; }
 
 .mb-sm {
   margin-bottom: 2rem; }
@@ -129,10 +149,10 @@ body {
   .header__btn {
     justify-self: center;
     align-self: start;
-    background-color: #EFD28D;
+    background-color: #efd28d;
     color: #333; }
     .header__btn::after {
-      background-color: #EFD28D; }
+      background-color: #efd28d; }
     .header__btn--animated {
       animation: moveInBottom 0.5s ease-out 0.75s;
       animation-fill-mode: backwards; }
@@ -146,7 +166,7 @@ body {
   font-weight: 400;
   letter-spacing: 0.5rem;
   text-align: center;
-  color: #EFD28D !important;
+  color: #efd28d !important;
   margin-left: 5rem; }
 
 .nav-link {
@@ -155,7 +175,7 @@ body {
   position: relative; }
   .nav-link::after {
     content: "";
-    background: #EFD28D;
+    background: #efd28d;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -175,8 +195,8 @@ body {
     margin-right: 2rem !important; }
 
 .navbar-toggler {
-  color: #EFD28D !important;
-  border-color: #EFD28D !important; }
+  color: #efd28d !important;
+  border-color: #efd28d !important; }
 
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(239, 210, 141, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important; }
@@ -206,10 +226,10 @@ body {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
 .btn--green {
-  background-color: #EFD28D;
+  background-color: #efd28d;
   color: #fff; }
   .btn--green::after {
-    background-color: #EFD28D; }
+    background-color: #efd28d; }
 
 .btn::after {
   content: "";
@@ -242,7 +262,8 @@ body {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(6, 1fr);
-  align-items: center; }
+  align-items: center;
+  background-color: #eee; }
   .story-picture img {
     width: 100%;
     grid-column: 2/6;
@@ -250,7 +271,7 @@ body {
 
 .story-content {
   grid-column: col-start 5 / full-end;
-  background-color: #fff;
+  background-color: #eee;
   padding: 6rem 8vw;
   display: grid;
   align-content: center;
@@ -258,7 +279,9 @@ body {
 
 .restaurant-menu {
   grid-column: full-start / full-end;
-  background-color: orangered;
+  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../../img/menu-bg.jpg);
+  background-position: center;
+  background-size: cover;
   display: grid;
   grid-template-columns: 1fr repeat(2, 30vw) 1fr;
   grid-template-rows: 1fr 70vh 1fr; }
@@ -267,7 +290,9 @@ body {
     grid-row: 2/3;
     background-image: url("../../img/meniu/pizza1.jpg");
     background-size: cover;
-    background-position: center; }
+    background-position: center;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem; }
     .restaurant-menu-cover img {
       width: 100%; }
   .restaurant-menu-checkbox {
@@ -294,10 +319,13 @@ body {
     .restaurant-menu-page-front {
       width: 100%;
       height: 100%;
-      background-color: #191966;
+      background-color: #fff;
+      color: #000;
       display: grid;
       grid-template-columns: 1fr repeat(4, minmax(mincontent, 10rem)) 1fr;
-      grid-template-rows: 1fr repeat(4, minmax(mincontent, 10rem)) 1fr; }
+      grid-template-rows: 1fr repeat(4, minmax(mincontent, 10rem)) 1fr;
+      border-top-right-radius: 2rem;
+      border-bottom-right-radius: 2rem; }
     .restaurant-menu-page-back {
       position: absolute;
       width: 100%;
@@ -338,15 +366,23 @@ body {
 
 .menu-title {
   grid-row: 1/2;
-  grid-column: 1/7;
-  justify-self: center;
-  align-self: center;
-  color: black; }
-
-.menu-page-next-btn {
-  grid-column: 6/7; }
-
-.products-container {
   grid-column: 1/6;
   justify-self: center;
   align-self: center; }
+
+.menu-page-next-btn {
+  grid-column: 6/7;
+  grid-row: 1/7;
+  justify-self: center;
+  align-self: center;
+  font-size: 3rem;
+  color: #efd28d;
+  cursor: pointer; }
+
+.products-container {
+  grid-column: 1/6;
+  grid-row: 2/7;
+  align-self: center;
+  text-align: center;
+  display: grid;
+  grid-row-gap: 1.5rem; }

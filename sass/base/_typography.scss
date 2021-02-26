@@ -12,11 +12,11 @@ body {
 
   &--main {
     font-family: $font-cursive;
-    font-size: 6rem;
+    font-size: 10rem;
     font-weight: 400;
     letter-spacing: 2.5rem;
     color: $color-primary;
-    animation-name: moveInLeft; 
+    animation-name: moveInLeft;
     animation-duration: 1s;
     animation-timing-function: ease-out;
   }
@@ -55,7 +55,7 @@ body {
   font-style: italic;
   line-height: 1;
   color: $color-grey-dark-1;
-} 
+}
 
 .story-text {
   font-size: 1.5rem;
@@ -63,7 +63,43 @@ body {
   margin-bottom: 4rem;
 }
 
-.mb-sm { margin-bottom: 2rem; }
-.mb-md { margin-bottom: 3rem; }
-.mb-lg { margin-bottom: 4rem; }
-.mb-hg { margin-bottom: 8rem; }
+.menu {
+  &-title {
+    color: $color-primary;
+    font-family: $font-cursive;
+    font-size: 5rem;
+    font-weight: 400;
+    letter-spacing: 1.5rem;
+  }
+
+  &-product {
+    &-title {
+      font-size: 2rem;
+      font-weight: 400;
+      color: $color-primary;
+    }
+
+    &-ing {
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+
+    &-price {
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+  }
+}
+
+.mb-sm {
+  margin-bottom: 2rem;
+}
+.mb-md {
+  margin-bottom: 3rem;
+}
+.mb-lg {
+  margin-bottom: 4rem;
+}
+.mb-hg {
+  margin-bottom: 8rem;
+}
