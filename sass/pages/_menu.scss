@@ -9,17 +9,23 @@
   background-position: center;
   background-size: cover;
   display: grid;
-  grid-template-columns: 1fr repeat(2, 30vw) 1fr;
-  grid-template-rows: 1fr 70vh 1fr;
+  grid-template-columns: 1fr repeat(10, 9vw) 1fr;
+  grid-template-rows: 1fr repeat(10, 9vh) 1fr;
 
   &-cover {
-    grid-column: 2/3;
-    grid-row: 2/3;
-    background-image: url("../../img/meniu/pizza1.jpg");
+    grid-column: 2/7;
+    grid-row: 3/11;
+    background-image: url("../../img/meniu/breakfast.jpg");
     background-size: cover;
     background-position: center;
     border-top-left-radius: 2rem;
     border-bottom-left-radius: 2rem;
+      @media only screen and (min-width: $bp-tablet) {
+        grid-column: 3/7;
+      }
+      @media only screen and (min-width: $bp-laptop) {
+        grid-column: 4/7;
+      }
     img {
       width: 100%;
     }
@@ -42,10 +48,16 @@
     color: white;
 
     &-container {
-      grid-column: 3/4;
-      grid-row: 2/3;
+      grid-column: 7/12;
+      grid-row: 3/11;
       position: relative;
       perspective: 2500px;
+      @media only screen and (min-width: $bp-tablet) {
+        grid-column: 7/11;
+      }
+      @media only screen and (min-width: $bp-laptop) {
+        grid-column: 7/10;
+      }
     }
 
     &-image {
@@ -59,8 +71,8 @@
       background-color: $color-white;
       color: $color-black;
       display: grid;
-      grid-template-columns: 1fr repeat(4, minmax(mincontent, 10rem)) 1fr;
-      grid-template-rows: 1fr repeat(4, minmax(mincontent, 10rem)) 1fr;
+      grid-template-columns: 1fr repeat(4, minmax(mincontent, 15rem)) 1fr;
+      grid-template-rows: 1fr repeat(4, minmax(mincontent, 15rem)) 1fr;
       border-top-right-radius: 2rem;
       border-bottom-right-radius: 2rem;
     }
@@ -72,49 +84,41 @@
       left: 0;
       transform: rotateY(180deg);
       backface-visibility: hidden;
-      background-image: url("../../img/meniu/pizza1.jpg");
-      background-size: cover;
-      background-position: center;
+      border-top-left-radius: 2rem;
+      border-bottom-left-radius: 2rem;
 
-      &-btn {
-        position: absolute;
-        bottom: 13px;
-        right: 13px;
-        cursor: pointer;
+      &-steak {
+        background-image: url("../../img/meniu/steak.jpg");
+        background-size: cover;
+        background-position: bottom;
       }
-
-      //   &-next-btn {
-      //     cursor: pointer;
-      //     grid-column: 6/7;
-      //     color: black;
-      //   }
+      &-pizza {
+        background-image: url("../../img/meniu/pizza.jpg");
+        background-size: cover;
+        background-position: bottom;
+      }
+      &-salad {
+        background-image: url("../../img/meniu/salad.jpg");
+        background-size: cover;
+        background-position: bottom;
+      }
+      &-soup {
+        background-image: url("../../img/meniu/soup.jpg");
+        background-size: cover;
+        background-position: bottom;
+      }
+      &-desert {
+        background-image: url("../../img/meniu/desert.jpg");
+        background-size: cover;
+        background-position: bottom;
+      }
+      &-drinks {
+        background-image: url("../../img/meniu/drinks.jpg");
+        background-size: cover;
+        background-position: bottom;
+      }
     }
   }
-}
-
-#c1:checked ~ .restaurant-menu-page-container #p1 {
-  transform: rotateY(-180deg);
-  z-index: 1;
-}
-
-#c2:checked ~ .restaurant-menu-page-container #p2 {
-  transform: rotateY(-180deg);
-  z-index: 2;
-}
-
-#c3:checked ~ .restaurant-menu-page-container #p3 {
-  transform: rotateY(-180deg);
-  z-index: 3;
-}
-
-#p1 {
-  z-index: 3;
-}
-#p2 {
-  z-index: 2;
-}
-#p3 {
-  z-index: 1;
 }
 
 .menu {
@@ -133,6 +137,22 @@
     font-size: 3rem;
     color: $color-primary;
     cursor: pointer;
+
+    // @media only screen and (min-width: $bp-mobile-s) {
+    //   grid-column: 1/5;
+    //   justify-self: end;
+    // }
+  }
+
+  &-page-back-btn {
+    font-size: 3rem;
+    color: $color-primary;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    padding-left: 1.5rem;
   }
 }
 
@@ -143,4 +163,65 @@
   text-align: center;
   display: grid;
   grid-row-gap: 1.5rem;
+}
+
+#c1:checked ~ .restaurant-menu-page-container #p1 {
+  transform: rotateY(-180deg);
+  z-index: 1;
+}
+
+#c2:checked ~ .restaurant-menu-page-container #p2 {
+  transform: rotateY(-180deg);
+  z-index: 2;
+}
+
+#c3:checked ~ .restaurant-menu-page-container #p3 {
+  transform: rotateY(-180deg);
+  z-index: 3;
+}
+
+#c4:checked ~ .restaurant-menu-page-container #p4 {
+  transform: rotateY(-180deg);
+  z-index: 4;
+}
+
+#c5:checked ~ .restaurant-menu-page-container #p5 {
+  transform: rotateY(-180deg);
+  z-index: 5;
+}
+
+#c6:checked ~ .restaurant-menu-page-container #p6 {
+  transform: rotateY(-180deg);
+  z-index: 6;
+}
+
+#c7:checked ~ .restaurant-menu-page-container #p7 {
+  transform: rotateY(-180deg);
+  z-index: 7;
+}
+
+#p1 {
+  z-index: 7;
+}
+#p2 {
+  z-index: 6;
+}
+#p3 {
+  z-index: 5;
+}
+
+#p4 {
+  z-index: 4;
+}
+
+#p4 {
+  z-index: 3;
+}
+
+#p6 {
+  z-index: 2;
+}
+
+#p7 {
+  z-index: 1;
 }

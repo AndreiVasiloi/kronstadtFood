@@ -24,8 +24,10 @@ $default-font-size: 1.6rem;
 $font-cursive: "Courgette", cursive;
 
 //Break points
-$bp-largest: 75em; // 1200px
-$bp-large: 62.5em; // 1000px
-$bp-medium: 50em; // 800px;
-$bp-small: 37.5em; // 600px;
-$bp-very-small: 20em; // 320px;
+$bp-laptop-l: 90em; // 1440px
+$bp-laptop: 64em; // 1024px
+// $bp-medium: 50em; // 800px;
+$bp-tablet: 48em; // 768px;
+$bp-mobile-s: 26.5em; // 425px;
+$bp-mobile-m: 23.5em; // 375px;
+$bp-mobile-s: 20em; // 320px;

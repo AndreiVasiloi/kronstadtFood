@@ -12,22 +12,31 @@ body {
 
   &--main {
     font-family: $font-cursive;
-    font-size: 10rem;
+    font-size: 8rem;
     font-weight: 400;
     letter-spacing: 2.5rem;
     color: $color-primary;
     animation-name: moveInLeft;
     animation-duration: 1s;
     animation-timing-function: ease-out;
+
+    // @media only screen and (min-width: $bp-mobile-s) {
+    //   font-size: 9rem;
+    // }
   }
 
   &--sub {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 700;
     letter-spacing: 1.75rem;
     color: $color-white;
     text-shadow: 2px 2px 5px $color-black;
     animation: moveInRight 1s ease-out;
+
+    // @media only screen and (min-width: $bp-tablet) {
+    //   font-size: 5rem;
+    //   color: aqua;
+    // }
   }
 }
 
@@ -47,6 +56,10 @@ body {
   font-size: 2.6rem;
   color: $color-primary;
   text-transform: uppercase;
+
+  @media only screen and (min-width: $bp-mobile-s) {
+    font-size: 3rem;
+  }
 }
 
 .story-header-2 {
@@ -55,12 +68,20 @@ body {
   font-style: italic;
   line-height: 1;
   color: $color-grey-dark-1;
+
+  @media only screen and (min-width: $bp-mobile-s) {
+    font-size: 4.5rem;
+  }
 }
 
 .story-text {
   font-size: 1.5rem;
   font-style: italic;
   margin-bottom: 4rem;
+
+  @media only screen and (min-width: $bp-mobile-s) {
+    font-size: 2rem;
+  }
 }
 
 .menu {
@@ -70,6 +91,18 @@ body {
     font-size: 5rem;
     font-weight: 400;
     letter-spacing: 1.5rem;
+
+    &-breakfast {
+      @media only screen and (min-width: $bp-mobile-s) {
+        font-size: 2.5rem;
+      }
+      @media only screen and (min-width: $bp-tablet) {
+        font-size: 4rem;
+      }
+      @media only screen and (min-width: $bp-laptop) {
+        font-size: 5rem;
+      }
+    }
   }
 
   &-product {
@@ -77,16 +110,34 @@ body {
       font-size: 2rem;
       font-weight: 400;
       color: $color-primary;
+      // @media only screen and (min-width: $bp-mobile-s) {
+      //   font-size: 2.5rem;
+      // }
+      // @media only screen and (min-width: $bp-tablet) {
+      //   font-size: 2rem;
+      // }
     }
 
     &-ing {
       font-size: 1.5rem;
       font-weight: 400;
+      // @media only screen and (min-width: $bp-mobile-s) {
+      //   font-size: 2rem;
+      // }
+      // @media only screen and (min-width: $bp-tablet) {
+      //   font-size: 1.5rem;
+      // }
     }
 
     &-price {
       font-size: 1.5rem;
       font-weight: 400;
+      // @media only screen and (min-width: $bp-mobile-s) {
+      //   font-size: 2rem;
+      // }
+      // @media only screen and (min-width: $bp-tablet) {
+      //   font-size: 1.5rem;
+      // }
     }
   }
 }
