@@ -1,0 +1,101 @@
+.team {
+  grid-column: center-start / center-end;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 7rem;
+
+  &-member {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+
+    &-name {
+      grid-column: 1/-1;
+    }
+    &-text {
+      grid-column: 1/-1;
+    }
+    &-card {
+      grid-column: 1/-1;
+      grid-template-rows: repeat(7, minmax(5rem, 1fr));
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    &-caption {
+      grid-column: 1/2;
+      justify-content: center;
+      align-content: center;
+      transition: all 0.5s;
+      backface-visibility: hidden;
+
+      z-index: 5;
+      display: grid;
+      grid-template-columns: repeat(2, mincontent);
+      grid-gap: 2rem;
+
+      @media only screen and (min-width: $bp-mobile-s) {
+        grid-row: 7/8;
+        opacity: 1;
+        color: $color-primary;
+        align-self: start;
+      }
+
+      @media only screen and (min-width: $bp-tablet) {
+        grid-row: 6/8;
+        align-self: center;
+      }
+
+      @media only screen and (min-width: $bp-laptop) {
+        grid-row: 1/8;
+        opacity: 0;
+        color: $color-white;
+        align-self: center;
+        transform: translateY(10%);
+      }
+
+      &-name {
+        font-size: 3rem;
+        font-family: $font-cursive;
+        text-transform: uppercase;
+      }
+      &-icons {
+        display: flex;
+        justify-content: space-evenly;
+        cursor: pointer;
+      }
+      &-icon {
+        font-size: 2.5rem;
+        &:hover {
+          color: $color-primary;
+        }
+      }
+    }
+    &-image {
+      width: 100%;
+      justify-self: center;
+      grid-column: 1/2;
+      transform: scale(0.8);
+      transition: all 0.5s;
+
+      @media only screen and (min-width: $bp-mobile-s) {
+        grid-row: 1/7;
+        width: 100%;
+      }
+
+      @media only screen and (min-width: $bp-laptop) {
+        grid-row: 1/8;
+        width: 100%;
+      }
+    }
+    &:hover &-caption {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    &:hover &-image {
+      transform: scale(1);
+      filter: blur(3px) brightness(50%);
+    }
+  }
+}
