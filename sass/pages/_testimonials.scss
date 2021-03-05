@@ -1,0 +1,13 @@
+.section-testimonials {
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url(../../img/testimonials-bg.jpg);
+  background-size: cover;
+  background-position: center;
+}
