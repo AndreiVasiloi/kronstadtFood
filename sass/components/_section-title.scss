@@ -1,29 +1,32 @@
 .section-title {
-    grid-column: 1/-1;
-    justify-self: center;
-    align-self: center;
-    display: grid;
-    grid-template-columns: 7rem max-content 7rem;
-    grid-column-gap: 1.5rem;
-    align-items: center;
+  grid-column: 1/-1;
+  justify-self: center;
+  align-self: center;
+  display: grid;
+  grid-template-columns: 7rem max-content 7rem;
+  grid-column-gap: 1.5rem;
+  align-items: center;
 
-    &-menu {
-        grid-row: 2/3;
-    }
-    &-team {
-    //    margin-top: 2rem;
-    }
+  &-menu {
+    grid-row: 2/3;
+  }
+  &-gal {
+    grid-row: 1/2;
+  }
+  &-testimonials {
+    grid-row: 2/3;
+  }
 
-    &::before,
-    &::after {
-        content: "";
+  &::before,
+  &::after {
+    content: "";
     height: 3px;
     display: block;
     background-color: currentColor;
-    box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 
-        @media only screen and (min-width: $bp-laptop) {
-            height: 5px;
-          }
+    @media only screen and (min-width: $bp-laptop) {
+      height: 5px;
     }
+  }
 }

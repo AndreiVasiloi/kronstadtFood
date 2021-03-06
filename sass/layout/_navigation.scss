@@ -1,5 +1,11 @@
 .bg-light {
-  background-color: transparent !important;
+  // background-color: rgba($color-primary, 0.7) !important;
+  background-image: linear-gradient(
+      to right bottom,
+      rgb(246, 230, 191),
+      rgb(229, 182, 72)
+    ),
+    linear-gradient(to right bottom, rgb(0, 0, 0), rgb(0, 0, 0));
 }
 
 .navbar-brand {
@@ -8,7 +14,7 @@
   font-weight: 400;
   letter-spacing: 0.5rem;
   text-align: center;
-  color: $color-primary !important;
+  color: $color-white !important;
   margin-left: 5rem;
 }
 
@@ -18,7 +24,7 @@
   position: relative;
   &::after {
     content: "";
-    background: $color-primary;
+    background: $color-white;
     position: absolute;
     bottom: 0;
     left: 0;
