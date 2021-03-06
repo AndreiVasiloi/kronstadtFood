@@ -1,7 +1,7 @@
 .team {
   grid-column: center-start / center-end;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 31.5rem));
 
   @media only screen and (min-width: $bp-mobile-s) {
     grid-gap: 0;
@@ -41,14 +41,9 @@
       grid-gap: 2rem;
 
       @media only screen and (min-width: $bp-mobile-s) {
-        grid-row: 6/7;
+        grid-row: 6/8;
         opacity: 1;
         color: $color-primary;
-        align-self: start;
-      }
-
-      @media only screen and (min-width: $bp-tablet) {
-        grid-row: 6/8;
         align-self: center;
       }
 
