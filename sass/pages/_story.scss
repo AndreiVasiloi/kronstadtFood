@@ -26,6 +26,9 @@
         width: 50%;
         justify-self: center;
       }
+      @media only screen and (min-width: 33em) {
+       width: 120%;
+      }
       @media only screen and (min-width: $bp-tablet) {
         width: 50%;
       }

@@ -10,7 +10,7 @@
   background-size: cover;
   display: grid;
   grid-template-columns: 1fr repeat(10, 9vw) 1fr;
-  grid-template-rows: 1fr repeat(10, 9vh) 1fr;
+  grid-template-rows: 5vh repeat(10, 9vh) 5vh;
 
   &-cover {
     grid-column: 2/7;
