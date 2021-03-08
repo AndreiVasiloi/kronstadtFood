@@ -140,6 +140,15 @@ body {
   font-weight: 400;
   letter-spacing: 1.5rem; }
   @media only screen and (min-width: 20em) {
+    .menu-title {
+      font-size: 3.5rem; } }
+  @media only screen and (min-width: 48em) {
+    .menu-title {
+      font-size: 3rem; } }
+  @media only screen and (min-width: 64em) {
+    .menu-title {
+      font-size: 3.1rem; } }
+  @media only screen and (min-width: 20em) {
     .menu-title-breakfast {
       font-size: 3.5rem; } }
   @media only screen and (min-width: 48em) {
@@ -155,7 +164,10 @@ body {
   color: #efd28d; }
   @media only screen and (min-width: 20em) {
     .menu-product-title {
-      font-size: 3rem; } }
+      font-size: 1.5rem; } }
+  @media only screen and (min-width: 33em) {
+    .menu-product-title {
+      font-size: 1.5rem; } }
   @media only screen and (min-width: 48em) {
     .menu-product-title {
       font-size: 2rem; } }
@@ -171,7 +183,10 @@ body {
   font-weight: 400; }
   @media only screen and (min-width: 20em) {
     .menu-product-ing {
-      font-size: 2rem; } }
+      font-size: 1rem; } }
+  @media only screen and (min-width: 33em) {
+    .menu-product-ing {
+      font-size: 1rem; } }
   @media only screen and (min-width: 48em) {
     .menu-product-ing {
       font-size: 1.2rem; } }
@@ -187,7 +202,10 @@ body {
   font-weight: 400; }
   @media only screen and (min-width: 20em) {
     .menu-product-price {
-      font-size: 1.9rem; } }
+      font-size: 0.9rem; } }
+  @media only screen and (min-width: 33em) {
+    .menu-product-price {
+      font-size: 0.7rem; } }
   @media only screen and (min-width: 48em) {
     .menu-product-price {
       font-size: 1rem; } }
@@ -250,6 +268,12 @@ body {
   text-align: center;
   color: #fff !important;
   margin-left: 5rem; }
+  @media only screen and (min-width: 20em) {
+    .navbar-brand {
+      margin-left: 0rem; } }
+  @media only screen and (min-width: 64em) {
+    .navbar-brand {
+      margin-left: 5rem; } }
 
 .nav-link {
   color: #fff !important;
@@ -266,6 +290,12 @@ body {
     width: 100%;
     transform: scaleX(0);
     transition: transform 0.3s; }
+    @media only screen and (min-width: 20em) {
+      .nav-link::after {
+        width: 10%; } }
+    @media only screen and (min-width: 64em) {
+      .nav-link::after {
+        width: 100%; } }
   .nav-link:hover::after {
     transform: scaleX(1); }
 
@@ -281,7 +311,7 @@ body {
   border-color: #efd28d !important; }
 
 .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(239, 210, 141, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important; }
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important; }
 
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -393,6 +423,9 @@ body {
       @media only screen and (min-width: 20em) {
         .carousel-item-img {
           width: 30%; } }
+      @media only screen and (min-width: 33em) {
+        .carousel-item-img {
+          width: 25%; } }
       @media only screen and (min-width: 48em) {
         .carousel-item-img {
           width: 25%; } }
@@ -827,6 +860,9 @@ body {
       @media only screen and (min-width: 48em) {
         .restaurant-menu-page-container {
           grid-column: 7/11; } }
+      @media only screen and (min-width: 33em) {
+        .restaurant-menu-page-container {
+          grid-row: 4/12; } }
       @media only screen and (min-width: 64em) {
         .restaurant-menu-page-container {
           grid-column: 7/10; } }
@@ -913,9 +949,13 @@ body {
   text-align: center;
   display: grid;
   grid-row-gap: 1.5rem; }
+  @media only screen and (min-width: 33em) {
+    .products-container {
+      grid-row-gap: 1rem; } }
   @media only screen and (min-width: 64em) {
     .products-container {
-      grid-row: 3/7; } }
+      grid-row: 3/7;
+      grid-row-gap: 1.5rem; } }
 
 #c1:checked ~ .restaurant-menu-page-container #p1 {
   transform: rotateY(-180deg);
