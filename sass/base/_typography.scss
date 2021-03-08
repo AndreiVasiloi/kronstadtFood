@@ -101,7 +101,7 @@ body {
         font-size: 3.5rem;
       }
       @media only screen and (min-width: $bp-tablet) {
-        font-size: 4rem;
+        font-size: 3rem;
       }
       @media only screen and (min-width: $bp-laptop) {
         font-size: 3.1rem;
@@ -117,6 +117,9 @@ body {
       @media only screen and (min-width: $bp-mobile-s) {
         font-size: 3rem;
       }
+      @media only screen and (min-width: $bp-tablet) {
+        font-size: 2rem;
+      }
       @media only screen and (min-width: $bp-laptop) {
         font-size: 2.5rem;
       }
@@ -131,6 +134,9 @@ body {
       @media only screen and (min-width: $bp-mobile-s) {
         font-size: 2rem;
       }
+      @media only screen and (min-width: $bp-tablet) {
+        font-size: 1.2rem;
+      }
       @media only screen and (min-width: $bp-laptop) {
         font-size: 1.5rem;
       }
@@ -144,6 +150,9 @@ body {
       font-weight: 400;
       @media only screen and (min-width: $bp-mobile-s) {
         font-size: 1.9rem;
+      }
+      @media only screen and (min-width: $bp-tablet) {
+        font-size: 1rem;
       }
       @media only screen and (min-width: $bp-laptop) {
         font-size: 1.5rem;
