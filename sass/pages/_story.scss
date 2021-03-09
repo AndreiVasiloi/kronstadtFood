@@ -12,7 +12,6 @@
 
 .story {
   &__picture {
-    // grid-column: full-start / col-end 4;
     display: grid;
     grid-template-rows: repeat(6, 1fr);
     grid-template-columns: repeat(6, 1fr);
@@ -23,7 +22,7 @@
     }
     @media only screen and (min-width: $bp-tablet) {
       grid-column: full-start / col-end 4;
-   }
+    }
   }
 
   &__img {
@@ -31,11 +30,6 @@
     grid-row: 2 / 6;
     grid-column: 2 / 6;
     box-shadow: 0 2rem 5rem rgba(#000, 0.1);
-
-    // @media only screen and (max-width: $bp-medium) {
-    //   grid-column: 1 / 5;
-    //   grid-row: 1 / -1;
-    // }
   }
 
   &__content {
@@ -44,61 +38,11 @@
     justify-items: start;
 
     @media only screen and (min-width: $bp-mobile-s) {
-        grid-column: 1 / -1;
-        padding: 6rem 8vw;
+      grid-column: 1 / -1;
+      padding: 6rem 8vw;
     }
     @media only screen and (min-width: $bp-tablet) {
-     grid-column: col-start 5 / full-end;
-  }
-
+      grid-column: col-start 5 / full-end;
+    }
   }
 }
-
-
-
-// .story {
-//   grid-column: full-start / full-end;
-//   display: grid;
-//   grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
-//   padding: 5rem;
-
-//   @media only screen and (min-width: $bp-mobile-s) {
-//     grid-gap: 5rem;
-//   }
-//   @media only screen and (min-width: 75em) {
-//     grid-gap: 7rem;
-//   }
-//   @media only screen and (min-width: $bp-laptop-l) {
-//     grid-gap: 10rem;
-//   }
-
-//   &-picture {
-//     display: grid;
-//     grid-template-columns: repeat(6, 1fr);
-//     align-content: start;
-
-//     img {
-//       width: 100%;
-//       grid-column: 2/6;
-//       @media only screen and (min-width: $bp-mobile-s) {
-//         width: 50%;
-//         justify-self: center;
-//       }
-//       @media only screen and (min-width: 33em) {
-//        width: 120%;
-//       }
-//       @media only screen and (min-width: $bp-tablet) {
-//         width: 50%;
-//       }
-//       @media only screen and (min-width: $bp-laptop) {
-//         width: 100%;
-//       }
-//     }
-//   }
-
-//   &-content {
-//     display: grid;
-//     grid-template-columns: repeat(6, 1fr);
-//     align-content: start;
-//   }
-// }
