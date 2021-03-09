@@ -7,19 +7,18 @@
 }
 
 html {
-  font-size: 62.5%;
   @media only screen and (min-width: $bp-mobile-s) {
-    font-size: 29%;
+    font-size: 50%;
   }
-  @media only screen and (min-width: $bp-tablet) {
-    font-size: 45%;
-  }
+  // @media only screen and (min-width: $bp-tablet) {
+  //   font-size: 45%;
+  // }
   @media only screen and (min-width: $bp-laptop) {
-    font-size: 55%;
+    font-size: 62.5%;
   }
-  @media only screen and (min-width: $bp-laptop-l) {
-    font-size: 70%;
-  }
+  // @media only screen and (min-width: $bp-laptop-l) {
+  //   font-size: 70%;
+  // }
 }
 
 body {
@@ -28,7 +27,8 @@ body {
 
 .body-container {
   display: grid;
-  grid-template-rows: 100vh min-content min-content min-content 100vh min-content 100vh min-content;
+  // grid-template-rows: 100vh min-content min-content min-content 100vh min-content 100vh min-content;
+  grid-template-rows: 100vh;
   grid-template-columns:
     [full-start] minmax(6rem, 1fr) [center-start] repeat(
       8,

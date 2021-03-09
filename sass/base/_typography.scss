@@ -4,12 +4,18 @@ body {
   line-height: 1.7;
 }
 
-.section-title {
+.section__title {
   color: $color-primary;
   font-family: $font-cursive;
   font-size: 4rem;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 
+  @media only screen and (min-width: $bp-mobile-s) {
+    font-size: 2.5rem;
+  }
+  @media only screen and (min-width: $bp-mobile-l) {
+    font-size: 3rem;
+  }
   @media only screen and (min-width: $bp-tablet) {
     font-size: 5rem;
   }
@@ -26,22 +32,41 @@ body {
 
   &--main {
     font-family: $font-cursive;
-    font-size: 8rem;
-    font-weight: 400;
-    letter-spacing: 2.5rem;
     color: $color-primary;
     animation-name: moveInLeft;
     animation-duration: 1s;
     animation-timing-function: ease-out;
+    @media only screen and (min-width: $bp-mobile-s) {
+      font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: 2rem;
+    }
+    @media only screen and (min-width: $bp-mobile-l) {
+      font-size: 4rem;
+    }
+    @media only screen and (min-width: $bp-tablet) {
+      font-size: 5.5rem;
+    }
+    @media only screen and (min-width: $bp-laptop) {
+      font-size: 7.5rem;
+    }
   }
 
   &--sub {
-    font-size: 2.5rem;
-    font-weight: 700;
-    letter-spacing: 1.75rem;
     color: $color-white;
     text-shadow: 2px 2px 5px $color-black;
     animation: moveInRight 1s ease-out;
+    @media only screen and (min-width: $bp-mobile-s) {
+      font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1.25rem;
+    }
+    @media only screen and (min-width: $bp-tablet) {
+      font-size: 2.5rem;
+    }
+    @media only screen and (min-width: $bp-laptop) {
+      font-size: 3rem;
+    }
   }
 }
 
@@ -55,38 +80,46 @@ body {
   transition: all 0.2s;
 }
 
-.story-header {
-  grid-column: 2/6;
-  font-family: $font-cursive;
-  font-weight: 400;
-  font-size: 2.5rem;
-  color: $color-primary;
-  text-transform: uppercase;
-
-  @media only screen and (min-width: $bp-tablet) {
-    font-size: 2rem;
-    grid-column: 1/-1;
+.story__content {
+  &-header {
+    font-family: $font-cursive;
+    font-weight: 400;
+    color: $color-primary;
+    text-transform: uppercase;
+  
+    @media only screen and (min-width: $bp-mobile-s) {
+      font-size: 2rem;
+      grid-column: 1/-1;
+    }
+    @media only screen and (min-width: 50em) {
+      font-size: 2.5rem;
+    }
+    @media only screen and (min-width: $bp-laptop) {
+      font-size: 3.5rem;
+    }
   }
-  @media only screen and (min-width: $bp-laptop) {
-    font-size: 2.5rem;
+
+  &-text {
+    font-style: italic;
+    margin-bottom: 2.5rem; 
+    color: $color-grey-dark-2;
+  
+    @media only screen and (min-width: $bp-mobile-s) {
+      font-size: 1rem;
+      grid-column: 1/-1;
+    }
+    @media only screen and (min-width: $bp-tablet) {
+      font-size: 1.2rem;
+    }
+    @media only screen and (min-width: 50em) {
+      font-size: 1.3rem;
+    }
+    @media only screen and (min-width: $bp-laptop) {
+      font-size: 1.5rem;
+    }
   }
 }
 
-.story-text {
-  grid-column: 2/6;
-  font-size: 2rem;
-  font-style: italic;
-  margin-bottom: 2.5rem;
-  color: $color-grey-dark-2;
-
-  @media only screen and (min-width: $bp-tablet) {
-    font-size: 1.5rem;
-    grid-column: 1/-1;
-  }
-  @media only screen and (min-width: $bp-laptop) {
-    font-size: 2rem;
-  }
-}
 
 .menu {
   &-title {
