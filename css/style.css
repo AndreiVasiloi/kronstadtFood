@@ -42,7 +42,8 @@
     font-size: 62.5%; } }
 
 body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  background-color: #f7f7f7; }
 
 .body-container {
   display: grid;
@@ -162,14 +163,14 @@ body {
   font-weight: 400; }
   @media only screen and (min-width: 20em) {
     .menu-title {
-      font-size: 2rem;
+      font-size: 1.8rem;
       letter-spacing: 0.5rem; } }
   @media only screen and (min-width: 48em) {
     .menu-title {
-      font-size: 4rem; } }
-  @media only screen and (min-width: 64em) {
+      font-size: 3rem; } }
+  @media only screen and (min-width: 90em) {
     .menu-title {
-      font-size: 5rem; } }
+      font-size: 4rem; } }
 
 .menu-product-title {
   font-weight: 400;
@@ -177,13 +178,13 @@ body {
   justify-self: center; }
   @media only screen and (min-width: 20em) {
     .menu-product-title {
-      font-size: 1.5rem; } }
+      font-size: 1.2rem; } }
   @media only screen and (min-width: 48em) {
     .menu-product-title {
-      font-size: 2.5rem; } }
-  @media only screen and (min-width: 64em) {
+      font-size: 1.8rem; } }
+  @media only screen and (min-width: 90em) {
     .menu-product-title {
-      font-size: 2.7rem; } }
+      font-size: 2.2rem; } }
 
 .menu-product-ing {
   font-weight: 400; }
@@ -192,7 +193,10 @@ body {
       font-size: 1rem; } }
   @media only screen and (min-width: 48em) {
     .menu-product-ing {
-      font-size: 2rem; } }
+      font-size: 1.4rem; } }
+  @media only screen and (min-width: 90em) {
+    .menu-product-ing {
+      font-size: 1.6rem; } }
 
 .menu-product-price {
   font-weight: 400;
@@ -201,10 +205,39 @@ body {
   justify-self: center; }
   @media only screen and (min-width: 20em) {
     .menu-product-price {
-      font-size: 1.2rem; } }
+      font-size: 1rem; } }
   @media only screen and (min-width: 48em) {
     .menu-product-price {
-      font-size: 2rem; } }
+      font-size: 1.1rem; } }
+  @media only screen and (min-width: 90em) {
+    .menu-product-price {
+      font-size: 1.3rem; } }
+
+.team-member-caption-name {
+  font-family: "Courgette", cursive;
+  text-transform: uppercase; }
+  @media only screen and (min-width: 20em) {
+    .team-member-caption-name {
+      font-size: 2rem;
+      color: #efd28d; } }
+  @media only screen and (min-width: 64em) {
+    .team-member-caption-name {
+      font-size: 3rem;
+      color: #fff; } }
+
+@media only screen and (min-width: 20em) {
+  .team-member-caption-icon {
+    font-size: 2rem;
+    color: #efd28d; } }
+
+@media only screen and (min-width: 64em) {
+  .team-member-caption-icon {
+    font-size: 2.5rem;
+    color: #fff; } }
+
+.team-member-caption-icon:hover {
+  color: #efd28d;
+  transform: scale(1.2); }
 
 .form-title {
   justify-self: center; }
@@ -214,9 +247,6 @@ body {
     font-size: 4rem;
     font-weight: 400;
     letter-spacing: 0.5rem; }
-
-.team-member-text {
-  font-size: 1.5rem; }
 
 .mb-sm {
   margin-bottom: 2rem; }
@@ -771,7 +801,6 @@ body {
     display: block; }
 
 .section__story {
-  background-color: #f7f7f7;
   grid-column: full-start / full-end;
   display: grid;
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
@@ -996,76 +1025,42 @@ body {
 .team {
   grid-column: center-start / center-end;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 31.5rem)); }
-  @media only screen and (min-width: 20em) {
-    .team {
-      grid-gap: 0; } }
-  @media only screen and (min-width: 64em) {
-    .team {
-      grid-gap: 7rem; } }
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  padding-bottom: 5rem; }
   .team-member {
     display: grid;
-    grid-template-columns: 1fr;
-    justify-content: center; }
-    .team-member-name {
-      grid-column: 1/-1; }
-    .team-member-text {
-      grid-column: 1/-1; }
-    .team-member-card {
-      grid-column: 1/-1;
-      grid-template-rows: repeat(7, minmax(5rem, 1fr));
-      position: relative;
-      display: grid;
-      grid-template-columns: 1fr; }
-    .team-member-caption {
-      grid-column: 1/2;
-      justify-content: center;
-      align-content: center;
-      transition: all 0.5s;
-      backface-visibility: hidden;
-      z-index: 5;
-      display: grid;
-      grid-template-columns: repeat(2, mincontent);
-      grid-gap: 2rem; }
-      @media only screen and (min-width: 20em) {
-        .team-member-caption {
-          grid-row: 6/8;
-          opacity: 1;
-          color: #efd28d;
-          align-self: center; } }
-      @media only screen and (min-width: 64em) {
-        .team-member-caption {
-          grid-row: 1/8;
-          opacity: 0;
-          color: #fff;
-          align-self: center;
-          transform: translateY(10%); } }
-      .team-member-caption-name {
-        font-size: 3rem;
-        font-family: "Courgette", cursive;
-        text-transform: uppercase; }
-      .team-member-caption-icons {
-        display: flex;
-        justify-content: space-evenly;
-        cursor: pointer; }
-      .team-member-caption-icon {
-        font-size: 2.5rem; }
-        .team-member-caption-icon:hover {
-          color: #efd28d; }
+    grid-template-columns: repeat(2, 1fr); }
     .team-member-image {
-      width: 100%;
-      justify-self: center;
-      grid-column: 1/2;
+      grid-column: 1/-1;
+      grid-row: 1/2;
       transform: scale(0.8);
       transition: all 0.5s; }
       @media only screen and (min-width: 20em) {
         .team-member-image {
-          grid-row: 1/7;
-          width: 100%; } }
+          width: 70%;
+          justify-self: center; } }
+    .team-member-caption {
+      grid-column: 1/-1;
+      justify-self: center;
+      backface-visibility: hidden;
+      z-index: 5;
+      transition: all 0.5s;
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-items: center;
+      align-self: center; }
+      @media only screen and (min-width: 20em) {
+        .team-member-caption {
+          opacity: 1; } }
       @media only screen and (min-width: 64em) {
-        .team-member-image {
-          grid-row: 1/8;
-          width: 100%; } }
+        .team-member-caption {
+          grid-row: 1/2;
+          opacity: 0;
+          grid-row-gap: 2rem; } }
+      .team-member-caption-icons {
+        width: 70%;
+        display: flex;
+        justify-content: space-between; }
     .team-member:hover .team-member-caption {
       opacity: 1;
       transform: translateY(0); }
