@@ -1,150 +1,78 @@
 .carousel {
+  grid-column: full-start / full-end;
   display: grid;
-  grid-template-columns: 1fr repeat(8, 10vw) 1fr;
-  grid-template-rows: 1fr repeat(11, 9vh) 1fr;
-
+  grid-template-columns:
+    [full-start] minmax(6rem, 1fr) [center-start] repeat(
+      8,
+      [col-start] minmax(min-content, 14rem) [col-end]
+    )
+    [center-end] minmax(6rem, 1fr) [full-end];
   &-inner {
-    align-self: center;
+    grid-column: full-start / full-end;
+
     @media only screen and (min-width: $bp-mobile-s) {
-      grid-column: 3/9;
-      grid-row: 6/7;
+      padding: 10rem 5rem;
     }
     @media only screen and (min-width: $bp-mobile-l) {
-      grid-row: 6/8;
+      padding: 10rem 8rem;
+    }
+    @media only screen and (min-width: 31.2em) {
+      padding: 10rem 12rem;
+    }
+    @media only screen and (min-width: 37.5em) {
+      padding: 10rem 15rem;
     }
     @media only screen and (min-width: $bp-tablet) {
-      grid-row: 7/8;
+      padding: 10rem 25rem;
     }
     @media only screen and (min-width: $bp-laptop) {
-      grid-column: 4/8;
-      grid-row: 3/12;
+      padding: 10rem 25rem;
+    }
+    @media only screen and (min-width: $bp-laptop-l) {
+      padding: 10rem 50rem;
     }
   }
   &-item {
-    padding-top: 75px;
-    border-radius: 1rem;
     &-container {
-      display: grid !important;
-      grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
-      grid-template-rows: 10vh repeat(2, 5vh) minmax(30vh, 40vh);
       background-color: #e9ebed;
-      grid-column: 1/-1;
-      grid-row: 2/3;
-      border-radius: 1rem;
-
-      @media only screen and (min-width: $bp-mobile-s) {
-        grid-gap: 2rem;
-        align-items: end;
-      }
-      @media only screen and (min-width: $bp-tablet) {
-        grid-gap: 2rem;
-        align-items: center;
-      }
-      @media only screen and (min-width: $bp-laptop) {
-        grid-gap: 1rem;
-        align-items: start;
-      }
+      border-radius: 3px;
+      display: grid;
+      grid-template-columns:
+        [full-start] minmax(6rem, 1fr) [center-start] repeat(
+          8,
+          [col-start] minmax(min-content, 14rem) [col-end]
+        )
+        [center-end] minmax(6rem, 1fr) [full-end];
+      grid-row-gap: 1rem;
+      justify-items: center;
     }
     &-img {
-      border-radius: 50%;
-      padding: 0.6rem;
-      background-color: $color-white;
-      justify-content: center;
-      margin: 0 auto;
+      grid-column: center-start / center-end;
       grid-row: 1/2;
-      align-self: start;
-      justify-self: center;
+      border-radius: 50%;
+      padding: 1rem;
+      background-color: $color-white;
       transform: translateY(-50%);
-      @media only screen and (min-width: $bp-mobile-s) {
-       width: 30%;
-      }
-      @media only screen and (min-width: 33em) {
-        width: 25%;
-       }
-    
-      @media only screen and (min-width: $bp-tablet) {
-      width: 25%;
-      }
-      .img {
-        border-radius: 50%;
+      img {
         width: 100%;
+        border-radius: 50%;
       }
     }
     &-city {
-      grid-row: 2/3;
-      justify-self: center;
-      font-size: 2rem;
-      color: #13293d;
-      @media only screen and (min-width: $bp-mobile-l) {
-        font-size: 2.5rem;
-      }
-      @media only screen and (min-width: $bp-tablet) {
-        font-size: 2rem;
-      }
+      grid-column: center-start / center-end;
+      grid-row: 1/2;
+      transform: translateY(50%);
     }
     &-name {
-      grid-row: 3/4;
-      justify-self: center;
-      color: $color-primary;
-      font-family: $font-cursive;
-      font-size: 3.5rem;
-      font-weight: 400;
-      letter-spacing: 0.5rem;
-      @media only screen and (min-width: $bp-mobile-l) {
-        font-size: 4rem;
-      }
-      @media only screen and (min-width: $bp-tablet) {
-        font-size: 3.5rem;
-      }
+      grid-column: center-start / center-end;
+      grid-row: 1/2;
+      transform: translateY(85%);
+      text-align: center;
     }
     &-text {
-      grid-row: 4/5;
-      justify-self: center;
-      color: #89949e;
-      font-size: 2rem;
-      padding: 3rem;
-      @media only screen and (min-width: $bp-mobile-s) {
-        align-self: center;
-        font-size: 1.5rem;
-      }
-      @media only screen and (min-width: $bp-mobile-l) {
-        font-size: 2rem;
-      }
-      @media only screen and (min-width: $bp-tablet) {
-        font-size: 1.5rem;
-      }
+      grid-column: full-start / full-end;
+      text-align: center;
+      padding: 5rem;
     }
-  }
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  height: 15rem;
-  width: 15rem;
-  background-image: none;
-}
-.carousel-control-next-icon:after {
-  content: ">";
-  font-size: 10rem;
-  color: $color-white;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
-  @media only screen and (min-width: $bp-mobile-s) {
-    font-size: 5rem;
-  }
-  @media only screen and (min-width: $bp-tablet) {
-    font-size: 10rem;
-  }
-}
-
-.carousel-control-prev-icon:after {
-  content: "<";
-  font-size: 10rem;
-  color: $color-white;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
-  @media only screen and (min-width: $bp-mobile-s) {
-    font-size: 5rem;
-  }
-  @media only screen and (min-width: $bp-tablet) {
-    font-size: 10rem;
   }
 }

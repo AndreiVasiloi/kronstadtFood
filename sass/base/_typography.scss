@@ -193,29 +193,28 @@ body {
     @media only screen and (min-width: $bp-mobile-s) {
       font-size: 2rem;
       color: $color-primary;
-    } 
+    }
     @media only screen and (min-width: $bp-laptop) {
       font-size: 3rem;
       color: $color-white;
-    } 
+    }
   }
   &-icon {
-   @media only screen and (min-width: $bp-mobile-s) {
-    font-size: 2rem; 
-    color: $color-primary;
-  }
-  @media only screen and (min-width: $bp-laptop) {
-    font-size: 2.5rem;
-    color: $color-white;
-  } 
+    @media only screen and (min-width: $bp-mobile-s) {
+      font-size: 2rem;
+      color: $color-primary;
+    }
+    @media only screen and (min-width: $bp-laptop) {
+      font-size: 2.5rem;
+      color: $color-white;
+    }
 
-  &:hover {
-    color: $color-primary;
-    transform: scale(1.2);
-  }
+    &:hover {
+      color: $color-primary;
+      transform: scale(1.2);
+    }
   }
 }
-
 
 .form-title {
   justify-self: center;
@@ -225,6 +224,52 @@ body {
     font-size: 4rem;
     font-weight: 400;
     letter-spacing: 0.5rem;
+  }
+}
+
+.carousel-item {
+  &-city {
+    color: #13293d;
+    @media only screen and (min-width: $bp-mobile-s) {
+      font-size: 2rem;
+    }
+    @media only screen and (min-width: $bp-laptop) {
+      font-size: 2.5rem;
+    }
+    @media only screen and (min-width: $bp-laptop-l) {
+      font-size: 3rem;
+    }
+  }
+  &-name {
+    color: $color-primary;
+    font-family: $font-cursive;
+    font-weight: 400;
+    letter-spacing: 0.5rem;
+    justify-self: center;
+
+    @media only screen and (min-width: $bp-mobile-s) {
+      font-size: 2rem;
+    }
+    @media only screen and (min-width: $bp-laptop) {
+      font-size: 3rem;
+    }
+    @media only screen and (min-width: $bp-laptop-l) {
+      font-size: 4rem;
+    }
+  }
+  &-text {
+    color: #89949e;
+    font-size: 1rem;
+
+    @media only screen and (min-width: $bp-mobile-s) {
+      font-size: 1rem;
+    }
+    @media only screen and (min-width: $bp-laptop) {
+      font-size: 1.5rem;
+    }
+    @media only screen and (min-width: $bp-laptop-l) {
+      font-size: 2rem;
+    }
   }
 }
 
