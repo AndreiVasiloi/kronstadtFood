@@ -1,86 +1,42 @@
 .form {
+  //background-color: yellowgreen;
+
   display: grid;
-  grid-template-columns: minmax(1rem, 5rem) repeat(7, 10vw) minmax(1rem, 5rem);
-  grid-template-rows: repeat(7, 5rem);
-  grid-row-gap: 4rem;
+  grid-template-columns: minmax(1rem, 3rem) minmax(10rem, 60rem) minmax(
+      1rem,
+      3rem
+    );
+  grid-template-rows: 7rem min-content 10rem;
 
   @media only screen and (min-width: $bp-mobile-s) {
-    padding-bottom: 1rem;
+    grid-column: full-start / full-end;
+    justify-self: center;
   }
   @media only screen and (min-width: $bp-tablet) {
+    grid-column: full-start / col-end 8;
     justify-self: start;
+  }
+  @media only screen and (min-width: $bp-laptop) {
+    grid-column: full-start / col-end 4;
+    justify-self: center;
   }
 
   &-title {
     grid-row: 1/2;
-
-    transform: translateY(1.5rem);
-    @media only screen and (min-width: $bp-mobile-s) {
-      grid-column: 2/9;
-    }
-    @media only screen and (min-width: $bp-tablet) {
-      grid-column: 2/7;
-    }
-    @media only screen and (min-width: $bp-laptop) {
-      grid-column: 2/6;
-    }
-    @media only screen and (min-width: $bp-laptop-l) {
-      grid-column: 2/5;
-    }
+    grid-column: 1/-1;
+    align-self: center;
   }
+  &-inputs {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    //background-color: orangered;
+    display: grid;
+    grid-template-columns: 2rem 1fr 2rem;
 
-  &-group {
-    @media only screen and (min-width: $bp-mobile-s) {
-      grid-column: 2/9;
-    }
-    @media only screen and (min-width: $bp-tablet) {
-      grid-column: 2/7;
-    }
-    @media only screen and (min-width: $bp-laptop) {
-      grid-column: 2/6;
-    }
-    @media only screen and (min-width: $bp-laptop-l) {
-      grid-column: 2/5;
-    }
-    &-name {
-      grid-row: 2/3;
-    }
-    &-email {
-      grid-row: 3/4;
-    }
-    &-number {
-      grid-row: 4/5;
-    }
-    &-date {
-      grid-row: 5/6;
-    }
-    &-time {
-      grid-row: 6/7;
-    }
-  }
-
-  &-btn {
-    grid-row: 7/8;
-    align-self: start;
-    background-color: $color-primary;
-    color: $color-grey-dark-3;
-
-    @media only screen and (min-width: $bp-mobile-s) {
-      justify-self: center;
-      grid-column: 1/10;
-    }
-
-    @media only screen and (min-width: $bp-tablet) {
-      justify-self: start;
-      grid-column: 2/10;
-    }
-
-    // @media only screen and (min-width: $bp-laptop) {
-    //  transform: translateY(-35%);
-    // }
-
-    &::after {
-      background-color: $color-primary;
+    &-group {
+      // background-color: aqua;
+      grid-column: 2/3;
+      align-self: center;
     }
   }
 
@@ -143,4 +99,174 @@
     opacity: 1;
     transform: translateY(0.5rem);
   }
+
+  &-btn {
+    grid-row: 3/4;
+    grid-column: 1/-1;
+    background-color: $color-primary;
+    color: $color-grey-dark-3;
+    justify-self: center;
+    align-self: center;
+
+    // @media only screen and (min-width: $bp-mobile-s) {
+    //   justify-self: center;
+    //   grid-column: 1/10;
+    // }
+
+    // @media only screen and (min-width: $bp-tablet) {
+    //   justify-self: start;
+    //   grid-column: 2/10;
+    // }
+
+    &::after {
+      background-color: $color-primary;
+    }
+  }
 }
+
+// .form {
+//   display: grid;
+//   grid-template-columns: minmax(1rem, 5rem) repeat(7, 10vw) minmax(1rem, 5rem);
+//   grid-template-rows: repeat(7, 5rem);
+//   grid-row-gap: 4rem;
+
+//   @media only screen and (min-width: $bp-mobile-s) {
+//     padding-bottom: 1rem;
+//   }
+//   @media only screen and (min-width: $bp-tablet) {
+//     justify-self: start;
+//   }
+
+//   &-title {
+//     grid-row: 1/2;
+
+//     transform: translateY(1.5rem);
+//     @media only screen and (min-width: $bp-mobile-s) {
+//       grid-column: 2/9;
+//     }
+//     @media only screen and (min-width: $bp-tablet) {
+//       grid-column: 2/7;
+//     }
+//     @media only screen and (min-width: $bp-laptop) {
+//       grid-column: 2/6;
+//     }
+//     @media only screen and (min-width: $bp-laptop-l) {
+//       grid-column: 2/5;
+//     }
+//   }
+
+//   &-group {
+//     @media only screen and (min-width: $bp-mobile-s) {
+//       grid-column: 2/9;
+//     }
+//     @media only screen and (min-width: $bp-tablet) {
+//       grid-column: 2/7;
+//     }
+//     @media only screen and (min-width: $bp-laptop) {
+//       grid-column: 2/6;
+//     }
+//     @media only screen and (min-width: $bp-laptop-l) {
+//       grid-column: 2/5;
+//     }
+//     &-name {
+//       grid-row: 2/3;
+//     }
+//     &-email {
+//       grid-row: 3/4;
+//     }
+//     &-number {
+//       grid-row: 4/5;
+//     }
+//     &-date {
+//       grid-row: 5/6;
+//     }
+//     &-time {
+//       grid-row: 6/7;
+//     }
+//   }
+
+//   &-btn {
+//     grid-row: 7/8;
+//     align-self: start;
+//     background-color: $color-primary;
+//     color: $color-grey-dark-3;
+
+//     @media only screen and (min-width: $bp-mobile-s) {
+//       justify-self: center;
+//       grid-column: 1/10;
+//     }
+
+//     @media only screen and (min-width: $bp-tablet) {
+//       justify-self: start;
+//       grid-column: 2/10;
+//     }
+
+//     // @media only screen and (min-width: $bp-laptop) {
+//     //  transform: translateY(-35%);
+//     // }
+
+//     &::after {
+//       background-color: $color-primary;
+//     }
+//   }
+
+//   &-input {
+//     font-size: 1.5rem;
+//     font-family: inherit;
+//     color: inherit;
+//     padding: 1.5rem 2rem;
+//     border-radius: 2px;
+//     background-color: rgba($color-white, 1);
+//     border: none;
+//     border-bottom: 3px solid transparent;
+//     width: 100%;
+//     transition: all 0.3s;
+
+//     &:focus {
+//       outline: none;
+//       box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+//       border-bottom: 3px solid $color-primary;
+//     }
+
+//     &:focus:invalid {
+//       border-bottom: 3px solid $color-secondary-dark;
+//     }
+
+//     &::-webkit-input-placeholder {
+//       color: $color-grey-dark-2;
+//     }
+//   }
+
+//   &-label {
+//     font-size: 1.2rem;
+//     font-weight: 700;
+//     margin-left: 2rem;
+//     margin-top: 0.7rem;
+//     transition: all 0.3s;
+//     &-date {
+//       transform: translateY(-3.5rem);
+//       width: 10%;
+//       opacity: 0;
+//     }
+//     &-time {
+//       transform: translateY(-3.5rem);
+//       width: 10%;
+//       opacity: 0;
+//     }
+//   }
+
+//   &-input:placeholder-shown + &-label {
+//     opacity: 0;
+//     visibility: hidden;
+//     transform: translateY(-4rem);
+//   }
+
+//   &-input:focus + &-label-date {
+//     opacity: 1;
+//     transform: translateY(0.5rem);
+//   }
+//   &-input:focus + &-label-time {
+//     opacity: 1;
+//     transform: translateY(0.5rem);
+//   }
+// }
