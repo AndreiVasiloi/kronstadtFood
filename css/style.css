@@ -86,33 +86,39 @@ body {
     animation-timing-function: ease-out; }
     @media only screen and (min-width: 20em) {
       .heading-primary--main {
-        font-size: 3rem;
+        font-size: 4rem;
         font-weight: 400;
         letter-spacing: 2rem; } }
     @media only screen and (min-width: 26.5em) {
       .heading-primary--main {
         font-size: 4rem; } }
+    @media only screen and (min-width: 26.5em) {
+      .heading-primary--main {
+        font-size: 4.5rem; } }
     @media only screen and (min-width: 48em) {
       .heading-primary--main {
-        font-size: 5.5rem; } }
+        font-size: 6rem; } }
     @media only screen and (min-width: 64em) {
       .heading-primary--main {
-        font-size: 7.5rem; } }
+        font-size: 8rem; } }
   .heading-primary--sub {
     color: #fff;
     text-shadow: 2px 2px 5px #000;
     animation: moveInRight 1s ease-out; }
     @media only screen and (min-width: 20em) {
       .heading-primary--sub {
-        font-size: 1.5rem;
+        font-size: 2rem;
         font-weight: 700;
         letter-spacing: 1.25rem; } }
-    @media only screen and (min-width: 48em) {
+    @media only screen and (min-width: 26.5em) {
       .heading-primary--sub {
         font-size: 2.5rem; } }
-    @media only screen and (min-width: 64em) {
+    @media only screen and (min-width: 48em) {
       .heading-primary--sub {
         font-size: 3rem; } }
+    @media only screen and (min-width: 64em) {
+      .heading-primary--sub {
+        font-size: 3.5rem; } }
 
 .heading-secondary {
   font-size: 3.5rem;
@@ -368,11 +374,12 @@ body {
     margin-right: 2rem !important; }
 
 .navbar-toggler {
+  background-color: #fff !important;
   color: #efd28d !important;
   border-color: #efd28d !important; }
 
 .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important; }
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(239, 210, 141, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important; }
 
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -425,10 +432,15 @@ body {
   top: 0;
   left: 0;
   height: 100%;
-  width: 100%;
   z-index: -1;
   opacity: 1;
   overflow: hidden; }
+  @media only screen and (min-width: 20em) {
+    .bg-video {
+      width: 105%; } }
+  @media only screen and (min-width: 23.5em) {
+    .bg-video {
+      width: 100%; } }
   .bg-video__content {
     height: 100%;
     width: 100%;
