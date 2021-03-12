@@ -1002,12 +1002,13 @@ body {
         width: 70%;
         display: flex;
         justify-content: space-between; }
-    .team-member:hover .team-member-caption {
-      opacity: 1;
-      transform: translateY(0); }
-    .team-member:hover .team-member-image {
-      transform: scale(1);
-      filter: blur(3px) brightness(50%); }
+    @media (hover: hover) and (pointer: fine) {
+      .team-member:hover .team-member-caption {
+        opacity: 1;
+        transform: translateY(0); }
+      .team-member:hover .team-member-image {
+        transform: scale(1);
+        filter: blur(3px) brightness(50%); } }
 
 .section-testimonials {
   grid-column: full-start / full-end;

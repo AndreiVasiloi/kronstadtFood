@@ -47,14 +47,15 @@
         justify-content: space-between;
       }
     }
-    &:hover &-caption {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    &:hover &-image {
-      transform: scale(1);
-      filter: blur(3px) brightness(50%);
+    @media (hover: hover) and (pointer: fine) {
+      &:hover &-caption {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      &:hover &-image {
+        transform: scale(1);
+        filter: blur(3px) brightness(50%);
+      }
     }
   }
 }
